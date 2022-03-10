@@ -158,14 +158,16 @@ const displayLikedPosts = () => {
   likedPosts.forEach(post => {
     const div = createPost(post);
     document.getElementById("liked").appendChild(div);
+    document.getElementById("container").style.display = "none";
   });
 };
 
 const displayReportedPosts = () => {
   const reportedPosts = getReportedPosts();
-  posts.forEach(post => {
+  reportedPosts.forEach(post => {
     const div = createPost(post);
     document.getElementById("reported").appendChild(div);
+    document.getElementById("container").style.display = "none";
   });
 };
 
